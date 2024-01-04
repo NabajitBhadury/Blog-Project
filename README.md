@@ -50,7 +50,7 @@ Now, you are ready to make your contributions.
 
 ## 🤝 Contributing
 
-Your contributions are valued! Whether it's bug fixes, new features, or improved documentation, we appreciate your efforts. Check out our [Contribution Guidelines](CONTRIBUTING.md) to get started.
+Your contributions are valued! Whether it's bug fixes, new features, or improved documentation, we appreciate your efforts. Check out our [Contribution Guidelines](contributing.md) to get started.
 
 
 
