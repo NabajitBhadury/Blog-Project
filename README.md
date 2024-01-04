@@ -5,7 +5,7 @@
 
 ## 🚀 Introduction
 
-Welcome to **TechBlogs**, an open-source blog website crafted by Nabajit Bhadury. Dive into a collaborative space where tech enthusiasts unite to share their insights on cutting-edge topics.
+Welcome to **Blog-Project**, an open-source blog website crafted by Nabajit Bhadury. Dive into a collaborative space where tech enthusiasts unite to share their insights on cutting-edge topics.
 
 ## 🛠️ Getting Started
 
