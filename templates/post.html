@@ -2,64 +2,157 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&family=Teko&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Genos:wght@200&family=Lemon&family=Teko&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Genos:wght@200&family=IBM+Plex+Mono:wght@300&family=Lemon&family=Teko&display=swap" rel="stylesheet">
+
+  
 <style>
-* {
-  box-sizing: border-box;
-}
+  *{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+  }
+ 
 
 body {
   font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
+  
+  background: #337da4;
 }
 
-.header {
-  padding: 2px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
-
-.leftcolumn {   
-  float: left;
-  width: 100%;
-}
-
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
+   .glow{
+    font-style: bold;
+    font-family: 'Lemon', serif;
+    font-size: 250%;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 70px;
+    color: #18ddf7;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
+  
+  @-webkit-keyframes glow{
+    from {
+      text-shadow: 0 0 10px #13ddf8, 0 0 20px #70c9d9, 0 0 30px #1d0f05, 0 0 40px #13e2e9, 
+                   0 0 50px #57ceec, 0 0 60px #6cd6f0, 0 0 70px #2fe1f1;
+    }
+    to {
+      text-shadow: 0 0 20px #eeeeee, 0 0 30px #040a61, 0 0 40px rgb(65, 86, 149), 0 0 50px #17aeef, 
+                   0 0 60px #270b6f, 0 0 70px #6194e0, 0 0 80px #21bdf0;
+    }
+  }
+  
+  .header {
+  
+    background-image: url(postbackground.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 50%;
+    color: #e8e9ee;
+    height: 300px;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem; 
+  }
+  .content{
+    background-color: rgb(55, 81, 106);
+    color:white ;
+    font-family: 'Times New Roman', Times, serif;
+    background-size: 100% 100%;
+    padding: 2px;
+    font-size: 20px;
+    text-align: justify;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+    height: auto;
+    width: auto;
 }
+
+  
+  .leftcolumn {   
+    float: left;
+    width: 100%;
+  }
+  
+  .card {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(5, 89, 132);
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+    color: rgb(234, 228, 228);
+    border: #FFFFFF;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h2>Nabajit's Blog</h2>
+  <h2 class="glow">Nabajit's Blog</h2>
+  
 </div>
-
+<hr style="height: 10px;">
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
         <h1>{{posts.title}}</h1>
-        <h5>{{posts.created_at}}</h5>
-        <p>{{posts.body}}</p>
+        <h5 style="font-family: 'Genos', sans-serif"> &rarr;{{posts.created_at}}</h5>
+        
     </div>
   </div>
 </div>
-
+<div class="content">
+  <p>{{posts.body}}</p>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<footer>
+  <p style="color:white;">&#169; 2024 Nabajit, All rights reserved.</p>
+</footer>
 </body>
 </html>
